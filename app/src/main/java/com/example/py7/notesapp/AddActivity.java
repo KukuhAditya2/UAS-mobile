@@ -8,8 +8,13 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.awt.Button;
+import java.awt.Checkbox;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import javax.swing.SpinnerModel;
+import javax.swing.plaf.basic.BasicBorders;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -26,8 +31,13 @@ public class AddActivity extends AppCompatActivity {
 
         id = getIntent().getLongExtra(DBHelper.row_id, 0);
 
-        TxTitle = (EditText)findViewById(R.id.txTitle_Add);
-        TxDetail = (EditText)findViewById(R.id.txDetail_Add);
+        nama_lapangan = (EditText)findViewById(R.id.nama_lapangan);
+        jenis_lapangan = (RadioGroup)findViewById(R.id.jenis_lapangan);
+        lokasi_lapangan = (SpinnerModel)findViewById(R.id.lokasi_lapangan);
+        tersedia_lapangan = (Checkbox)findViewById(R.id.tersedia_lapangan_container);
+        btnInsert = (Button)findViewById(R.id.button_insert)
+        btnView = (Button)findViewById(R.id.button_view)
+
     }
 
     public boolean onCreateOptionsMenu (Menu menu){

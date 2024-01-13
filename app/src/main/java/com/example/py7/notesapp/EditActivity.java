@@ -15,6 +15,8 @@ public class EditActivity extends AppCompatActivity {
 
     DBHelper helper;
     EditText TxTitle, TxDetail;
+
+    nama_lapangan, jenis_lapangan, lokasi_lapangan, tersedia_lapangan;
     long id;
 
     @Override
@@ -26,8 +28,10 @@ public class EditActivity extends AppCompatActivity {
 
         id = getIntent().getLongExtra(DBHelper.row_id, 0);
 
-        TxTitle = (EditText)findViewById(R.id.txTitle_Edit);
-        TxDetail = (EditText)findViewById(R.id.txDetail_Edit);
+        nama = (EditText)findViewById(R.id.nama_lapangan);
+        jenis = (EditText)findViewById(R.id.jenis_lapangan);
+        lokasi = (EditText)findViewById(R.id.lokasi_lapangan);
+        tersedia = (EditText)findViewById(R.id.tersedia_jenis_lapangan);
 
         getData();
     }

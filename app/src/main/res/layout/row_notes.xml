@@ -13,19 +13,19 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/listID"
+            android:id="@+id/nama_lapangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"/>
         <TextView
-            android:id="@+id/listTitle"
+            android:id="@+id/jenis_lapangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
             android:textSize="17sp"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/listDetail"
+            android:id="@+id/lokasi_lapangan"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -34,7 +34,7 @@
             android:maxLines="3"
             android:textSize="16sp"/>
         <TextView
-            android:id="@+id/listCreated"
+            android:id="@+id/tersedia_lapangan_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"

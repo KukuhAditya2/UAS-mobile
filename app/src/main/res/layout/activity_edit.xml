@@ -8,27 +8,119 @@
     tools:context=".EditActivity"
     android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <EditText
-            android:id="@+id/txID_Edit"
+        android:text="Insert Data"
+        android:textSize="26dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/nama_lapangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:hint="Nama Lapangan"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/jenis_lapangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/nama_lapangan" >
+
+        <RadioButton
+            android:id="@+id/indoor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"/>
-        <EditText
-            android:id="@+id/txTitle_Edit"
+            android:text="Indoor" />
+
+        <RadioButton
+            android:id="@+id/outdoor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Title" />
-        <EditText
-            android:id="@+id/txDetail_Edit"
+            android:text="Outdoor" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/lokasi_lapangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jenis_lapangan"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/tersedia_lapangan_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/lokasi_lapangan"
+        android:layout_marginTop="20dp">
+
+        <CheckBox
+            android:id="@+id/senin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Notes"
-            android:inputType="textMultiLine"
-            android:scrollbars="vertical"/>
+            android:text="Senin" />
+
+        <CheckBox
+            android:id="@+id/selasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selasa" />
+
+        <CheckBox
+            android:id="@+id/rabu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rabu" />
+
+        <CheckBox
+            android:id="@+id/kamis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kamis" />
+
+        <CheckBox
+            android:id="@+id/jumat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumat" />
+
+        <CheckBox
+            android:id="@+id/sabtu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sabtu" />
+
+        <CheckBox
+            android:id="@+id/minggu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minggu" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tersedia_lapangan_container"
+        android:layout_marginTop="20dp"
+        android:text="Insert Data"/>
+
+    <Button
+        android:id="@+id/button_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_insert"
+        android:layout_marginTop="20dp"
+        android:text="View Data"/>
 
 </LinearLayout>
