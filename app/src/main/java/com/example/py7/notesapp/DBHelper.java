@@ -8,13 +8,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String database_name = "db_note";
-    public static final String table_name = "tabel_notes";
+    public static final String database_name = "lapangan";
+    public static final String table_name = "lapangan118";
 
-    public static final String row_id = "_id";
-    public static final String row_title = "Title";
-    public static final String row_note = "Note";
-    public static final String row_created = "Created";
+    public static final String row_id = "lapangan_id";
+    public static final String row_name = "nama_lapangan";
+    public static final String row_jenis = "jenis_lapangan";
+    public static final String row_lokasi = "lokasi_lapangan";
+
+    public static final String row_tersedia = "tersedia_lapangan";
 
     private SQLiteDatabase db;
 
@@ -26,7 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " + table_name + "(" + row_id + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + row_title + " TEXT," + row_note + " TEXT, " + row_created + " TEXT)";
+                + row_name + " TEXT," + row_jenis + " TEXT, " + row_lokasi + " TEXT, " + row_tersedia + " TEXT, " + row_lokasi + " TEXT)";
         db.execSQL(query);
     }
 
